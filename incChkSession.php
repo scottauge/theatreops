@@ -1,3 +1,8 @@
+<?php
+
+// $Header: file:///Users/scottauge/Documents/SVN/theatre/incChkSession.php 2 2019-06-20 18:03:22Z scottauge $
+
+/**************************************************************************
 MIT License
 
 Copyright (c) 2021 Scott Auge
@@ -19,3 +24,26 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+**************************************************************************/
+
+// Determine if a user is logged in via their cookie session id
+// Else, we send them to the index.php screen.
+// This should be used on everything but the main.php which does the login.
+
+include_once "incLoadScreen.php";
+include_once "clsSession.php";
+include_once "clsDB.php";
+
+// Is the cookie set?
+
+$Cookie = $_COOKIE["MailListLogin"];
+if ($Cookie == "") LoadScreen("index.php");
+
+// Does the cookie relate to a Login?
+
+$DB = new clsDB();
+$Session = new clsSession($DB);
+$Session->FindByCookieName($Cookie, "Login");
+if (!$Session->Available()) LoadScreen("index.php");
+?>
+

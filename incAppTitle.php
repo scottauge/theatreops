@@ -1,3 +1,6 @@
+<?php
+
+/**************************************************************************
 MIT License
 
 Copyright (c) 2021 Scott Auge
@@ -19,3 +22,18 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+**************************************************************************/
+
+$OrgName = new clsParameter($DB);
+$OrgName->FindByName("organization");
+$Title = new clsParameter($DB);
+$Title->FindByName("title");
+?>
+<link href="theatre.css" rel="stylesheet" type="text/css" />
+
+<table width="100%">
+  <tr>
+    <td align="left"><h2><?php print $Title->Value ?></h2></td>
+    <td align="right"><h2><?php print $OrgName->Value ?></h2></td>
+  </tr>
+</table>

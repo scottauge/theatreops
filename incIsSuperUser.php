@@ -1,3 +1,8 @@
+<?php
+
+// $Header: file:///Users/scottauge/Documents/SVN/theatre/incIsSuperUser.php 18 2019-07-10 18:56:17Z scottauge $
+
+/**************************************************************************
 MIT License
 
 Copyright (c) 2021 Scott Auge
@@ -19,3 +24,30 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+**************************************************************************/
+
+include_once "clsDB.php";
+include_once "clsSession.php";
+include_once "clsLogins.php";
+
+function IsSuperUser ($CookieValue) {
+	
+	$DB = new clsDB();
+	$Session = new clsSession($DB);
+	
+	
+	// If not logged in, bail
+	
+	$Session->FindByCookieName ($CookieValue, "Login");
+	
+	if (! $Session->Available()) return FALSE;
+
+	$Login = new clsLogins($DB);
+	$Login->FindByID($Session->SessionValue);
+	
+	if ($Login->IsSuperUser) return TRUE;
+
+	return FALSE;
+	
+}
+?>

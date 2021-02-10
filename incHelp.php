@@ -1,3 +1,6 @@
+<?php
+
+/**************************************************************************
 MIT License
 
 Copyright (c) 2021 Scott Auge
@@ -19,3 +22,14 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+**************************************************************************/
+
+function HelpLink ($PageName) {
+?><div align="right" style="FormFace">
+<a href=<?php print "help.php?pagename=" . $PageName; ?> target="_new" >Help</a>
+</div>
+<?php	
+}
+?>
+<!-- $Header: file:///Users/scottauge/Documents/SVN/theatre/incHelp.php 26 2019-07-31 20:19:36Z scottauge $ -->
+

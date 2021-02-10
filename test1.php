@@ -1,3 +1,23 @@
+<?php
+
+// $Header: file:///Users/scottauge/Documents/SVN/theatre/test1.php 2 2019-06-20 18:03:22Z scottauge $
+
+include_once "incGenerateSelect.php";
+include_once "clsDB.php";
+
+include_once "incGenerateSelect.php";
+
+$DB = new clsDB();
+
+
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+</head>
+<!--
+/**************************************************************************
 MIT License
 
 Copyright (c) 2021 Scott Auge
@@ -19,3 +39,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+**************************************************************************/
+-->
+<body>
+<?php print GenerateSelect("Status", "StatusOptions", $DB) ?>
+
+<?php print ($_SERVER['SERVER_NAME']); ?>
+</body>
+
+</html>

@@ -1,3 +1,6 @@
+<?php
+
+/**************************************************************************
 MIT License
 
 Copyright (c) 2021 Scott Auge
@@ -19,3 +22,30 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+**************************************************************************/
+
+// $Header: file:///Users/scottauge/Documents/SVN/theatre/Session.php 2 2019-06-20 18:03:22Z scottauge $
+
+class Session extends clsUtil {
+  
+  function CreateSession ($Name,$Value) {
+	  var $SessionID;
+	  
+    $Session = $this->RandomString(60);
+	  return $SessionID;
+  }
+  
+  function DeleteSession ($SessionID) {
+	  
+
+  }
+  
+  function ReadSession ($SessionID) {
+	  
+  }
+  
+}
+
+$Session = new Session();
+
+?>

@@ -1,3 +1,10 @@
+<?php
+// $Header: file:///Users/scottauge/Documents/SVN/theatre/incDBSubstitution.php 2 2019-06-20 18:03:22Z scottauge $
+// Use as follows
+// $SubstitutionNVPs = "Name=Scott,Address1=1918 Briarwood Dr, ... ";
+// $InTemplate = "Hello {Name}, ... ";
+
+/**************************************************************************
 MIT License
 
 Copyright (c) 2021 Scott Auge
@@ -19,3 +26,26 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+**************************************************************************/
+
+function DBSubstitution ($InTemplate, $SubstitutionNVPs) {
+
+  
+  $List = explode (",", $SubstitutionNVPs);
+  
+  $Count = count($List);
+
+  for ($Iter = 0; $Iter < $Count; $Iter++) {
+	  
+    list($Name, $Value) = explode ("=", $List[$Iter]);
+  
+    $InTemplate = str_replace("{" . $Name . "}", $Value, $InTemplate);
+	
+  } // for ...
+  
+  return $InTemplate;
+	
+}
+
+
+?>
