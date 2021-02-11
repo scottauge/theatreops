@@ -239,7 +239,7 @@ CREATE TABLE `Logins` (
 INSERT INTO `Logins` (`RecID`, `UserID`, `Password`, `IsActive`, `IsSuperUser`, `EMail`, `Question1`, `Answer1`, `Question2`, `Answer2`) VALUES
 ('1', 'test', 'tset', 1, 0, '', '', '', '', ''),
 ('1562720226J5RTm9to6nAF8p1VwemFUXGssJ4Vuk9vdjdgaOQB', 'demo', 'demo', 1, 0, 'demo@amduus.com', '', '', '', ''),
-('20180723asldufhakdjfblkdasjbc', 'sauge@amduus.com', 'testme1', 1, 1, 'sauge@amduus.com', '', '', '', '');
+('20180723asldufhakdjfblkdasjbc', 'root', 'root', 1, 1, 'sauge@amduus.com', '', '', '', '');
 
 -- --------------------------------------------------------
 
