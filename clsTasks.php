@@ -129,7 +129,7 @@ class clsTasks extends clsUtil {
     // back out with the slashes.
     //
 
-    if (get_magic_quotes_gpc() || ini_get("magic_quotes_runtime")) {
+    // if (get_magic_quotes_gpc() || ini_get("magic_quotes_runtime")) {
 
       $this->RecID = stripslashes($this->RecID);
       $this->Description = stripslashes($this->Description);
@@ -138,7 +138,7 @@ class clsTasks extends clsUtil {
 	  $this->Priority = stripslashes($this->Priority);
 	  $this->Title = stripslashes($this->Title);
 
-    } // if magic used
+    // } // if magic used
 
     //
     //  Warning!  Generator doesn't handle blob fields very well.  You may need to do some

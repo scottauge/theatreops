@@ -2,6 +2,7 @@
 
 // $Header: file:///Users/scottauge/Documents/SVN/theatre/ParameterMaintenance.php 31 2019-08-09 03:09:48Z scottauge $
 
+include_once "nonotice.php";
 include_once "incLoginSession.php";
 include_once "clsDB.php";
 include_once "clsParameter.php";

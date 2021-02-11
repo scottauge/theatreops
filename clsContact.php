@@ -127,7 +127,7 @@ class clsContact extends clsUtil {
     // back out with the slashes.
     //
 
-    if (get_magic_quotes_gpc() || ini_get("magic_quotes_runtime")) {
+    // if (get_magic_quotes_gpc() || ini_get("magic_quotes_runtime")) {
 
       $this->RecID = stripslashes($this->RecID);
       $this->ContactName = stripslashes($this->ContactName);
@@ -136,7 +136,7 @@ class clsContact extends clsUtil {
       $this->RelationRecID = stripslashes($this->RelationRecID);
       $this->RelationTable = stripslashes($this->RelationTable);
 
-    } // if magic used
+    // } // if magic used
 
     //
     //  Warning!  Generator doesn't handle blob fields very well.  You may need to do some

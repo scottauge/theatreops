@@ -129,7 +129,7 @@ class clsAudit extends clsUtil {
     // back out with the slashes.
     //
 
-    if (get_magic_quotes_gpc() || ini_get("magic_quotes_runtime")) {
+    // if (get_magic_quotes_gpc() || ini_get("magic_quotes_runtime")) {
 
       $this->RecID = stripslashes($this->RecID);
       $this->LoginRecID = stripslashes($this->LoginRecID);
@@ -138,7 +138,7 @@ class clsAudit extends clsUtil {
       $this->DateTime = stripslashes($this->DateTime);
       $this->Operation = stripslashes($this->Operation);
 
-    } // if magic used
+    // } // if magic used
 
     //
     //  Warning!  Generator doesn't handle blob fields very well.  You may need to do some

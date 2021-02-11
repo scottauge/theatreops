@@ -24,6 +24,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 **************************************************************************/
 
+include_once "nonotice.php";
+
 function HelpLink ($PageName) {
 ?><div align="right" style="FormFace">
 <a href=<?php print "help.php?pagename=" . $PageName; ?> target="_new" >Help</a>

@@ -5,6 +5,7 @@
 // Here we take the Cookie, Password, and UserID and attempt to verify against
 // what is in the database.
 
+include_once "nonotice.php";
 include_once "clsDB.php";
 include_once "clsSession.php";
 include_once "incLoadScreen.php";

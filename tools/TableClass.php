@@ -335,15 +335,15 @@ $SQLUPDATEBind = substr($SQLUPDATEBind, 0, strlen($SQLUPDATEBind) - 2);
     // back out with the slashes.
     //
 
-    if (get_magic_quotes_gpc() || ini_get("magic_quotes_runtime")) {
 
-<?php
+
+    <?php
     foreach ($FieldList as $FieldName) {
       print ("      \$this->" . $FieldName . " = stripslashes(\$this->" . $FieldName . ");\n" );
     } // for each
     ?>
 
-    } // if magic used
+
 
     //
     //  Warning!  Generator doesn't handle blob fields very well.  You may need to do some

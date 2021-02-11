@@ -5,7 +5,7 @@
 
 // TODO: If no membership record on non-members, will not print their letter when Non-members chosen
 
-
+include_once "nonotice.php";
 include_once "incLoginSession.php";
 include_once "clsParameter.php";
 include_once "clsDB.php";

@@ -67,10 +67,12 @@ $Id: newpeople.php 31 2019-08-09 03:09:48Z scottauge $
 <p>&nbsp;</p>
 
 <?php 
+include_once "nonotice.php";
+
 
 $HasUserData = $_POST["Name"]
-           . $_POST["Email"]
-		   . $_POST["Address1"];
+             . $_POST["Email"]
+		     . $_POST["Address1"];
 
 
 // We've got an ID and password and user information.  Look up the record

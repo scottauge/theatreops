@@ -2,6 +2,7 @@
 
 // $Header: file:///Users/scottauge/Documents/SVN/theatre/pubPerson.php 2 2019-06-20 18:03:22Z scottauge $
 
+include_once "nonotice.php";
 include_once "clsUtil.php";
 include_once "clsParameter.php";
 include_once "clsDB.php";

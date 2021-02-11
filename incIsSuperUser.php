@@ -26,6 +26,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 **************************************************************************/
 
+include_once "nonotice.php";
 include_once "clsDB.php";
 include_once "clsSession.php";
 include_once "clsLogins.php";

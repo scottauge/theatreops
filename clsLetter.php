@@ -124,13 +124,13 @@ class clsLetter extends clsUtil {
     // back out with the slashes.
     //
 
-    if (get_magic_quotes_gpc() || ini_get("magic_quotes_runtime")) {
+    // if (get_magic_quotes_gpc() || ini_get("magic_quotes_runtime")) {
 
       $this->RecID = stripslashes($this->RecID);
       $this->Name = stripslashes($this->Name);
       $this->Body = stripslashes($this->Body);
 
-    } // if magic used
+    // } // if magic used
 
     //
     //  Warning!  Generator doesn't handle blob fields very well.  You may need to do some

@@ -4,6 +4,7 @@
 
 // use PHPMailer\PHPMailer;
 
+include_once "nonotice.php";
 include_once "incLoginSession.php";
 include_once "clsParameter.php";
 include_once "clsDB.php";

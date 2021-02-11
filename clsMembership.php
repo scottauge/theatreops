@@ -103,7 +103,7 @@ class clsMembership extends clsUtil {
     // back out with the slashes.
     //
 
-    if (get_magic_quotes_gpc() || ini_get("magic_quotes_runtime")) {
+    // if (get_magic_quotes_gpc() || ini_get("magic_quotes_runtime")) {
 
       $this->MainListRecID = stripslashes($this->MainListRecID);
       $this->RecID = stripslashes($this->RecID);
@@ -111,7 +111,7 @@ class clsMembership extends clsUtil {
       $this->EndDate = stripslashes($this->EndDate);
       $this->Payment = stripslashes($this->Payment);
 
-    } // if magic used
+    // } // if magic used
 
     //
     //  Warning!  Generator doesn't handle blob fields very well.  You may need to do some

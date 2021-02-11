@@ -1,4 +1,5 @@
 <?php
+include_once "nonotice.php";
 include_once "clsDB.php";
 include_once "clsParameter.php";
 

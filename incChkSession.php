@@ -30,6 +30,7 @@ SOFTWARE.
 // Else, we send them to the index.php screen.
 // This should be used on everything but the main.php which does the login.
 
+include_once "nonotice.php";
 include_once "incLoadScreen.php";
 include_once "clsSession.php";
 include_once "clsDB.php";

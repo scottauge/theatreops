@@ -1,6 +1,7 @@
 <?php
 // $Header: file:///Users/scottauge/Documents/SVN/theatre/updatepeople.php 31 2019-08-09 03:09:48Z scottauge $
 
+include_once "nonotice.php";
 include_once "clsUtil.php";
 include_once "clsParameter.php";
 include_once "clsDB.php";
@@ -13,6 +14,7 @@ include_once "incMembership.php";
 include_once "clsMembership.php";
 include_once "sqltous.php";
 include_once "incHelp.php";
+
 
 $DB = new clsDB();
 $Parameter = new clsParameter($DB);
@@ -84,7 +86,7 @@ $Notes->FindByTableID("MainList", $Person->RecID);
 	// For some reason $Person->Name will not accept the $_POST["Name"]
 	// So putting it into a variable and assigning that way.  Makes no
 	// sense.
-if ($_POST["Name"] <> "") {	
+if (!empty($_POST) && $_POST["Name"] <> "") {	
 
 	$Name = $_POST["Name"];
 	$Person->Name = $Name;

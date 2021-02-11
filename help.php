@@ -24,6 +24,7 @@ $Id: help.php 2 2019-06-20 18:03:22Z scottauge $
 -->
 
 <?php
+include_once "nonotice.php";
 
 $PageName = $_REQUEST["pagename"];
 include "help/" . $PageName . ".html";

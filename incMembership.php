@@ -7,6 +7,7 @@
 // $ShowHistory = yes, show the history of previous payments
 // $ShowUpdate = yes, show empty entries for update (usually in another program)
 
+include_once "nonotice.php";
 include_once "clsMembership.php";
 include_once "clsDB.php";
 include_once "sqltous.php";
@@ -34,13 +35,19 @@ function DisplayMembership ($UserID, $DB, $ShowUpdate, $ShowHistory) {
     </tr>
     <?php 
     if ($ShowHistory == "yes") {
+	// looks like my php doesn't have this!
+	// $formatter = new NumberFormatter('us', NumberFormatter::CURRENCY);
 	while ($Data = $Results->fetch_array(MYSQLI_ASSOC)) { 
     ?>
 	<tr>
       <td><input type="checkbox" name="<?php print $Data["RecID"] ?>" value="yes"/>
       <td><?php print sqltous($Data["StartDate"]) ?></td>
       <td><?php print sqltous($Data["EndDate"]) ?></td>
-      <td><?php print money_format('%.2n', $Data["Payment"]) ?></td>
+	  <td><?php print (number_format($Data["Payment"], 2, '.', ',')) ?></td>
+	  
+	  <!-- <td><?php //print ($formatter->formatCurrency($Data["Payment"], 'USD')) ?></td> -->
+	  
+      <!-- <td><?php // print money_format('%.2n', $Data["Payment"]) ?></td> -->
     </tr>
     <?php 
 	} // while 

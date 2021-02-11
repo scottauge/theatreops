@@ -201,13 +201,13 @@ class clsListToActivity extends clsUtil {
     // back out with the slashes.
     //
 
-    if (get_magic_quotes_gpc() || ini_get("magic_quotes_runtime")) {
+    // if (get_magic_quotes_gpc() || ini_get("magic_quotes_runtime")) {
 
       $this->RecID = stripslashes($this->RecID);
       $this->ActivityRecID = stripslashes($this->ActivityRecID);
       $this->MainListRecID = stripslashes($this->MainListRecID);
 
-    } // if magic used
+    // } // if magic used
 
     //
     //  Warning!  Generator doesn't handle blob fields very well.  You may need to do some

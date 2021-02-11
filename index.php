@@ -9,7 +9,7 @@
 //setcookie("MailListLogin", $S, 0, $_SERVER["SERVER_NAME"]);
 
 
-
+include_once "nonotice.php";
 include_once "clsUtil.php";
 include_once "clsParameter.php";
 include_once "clsDB.php";
