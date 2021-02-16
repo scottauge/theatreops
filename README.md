@@ -1,6 +1,10 @@
 # theatreops
 Tool for live theatre to manage customer relationships and inventory
 
+# Latest update
+
+- Various changes to tools/TableClass.php to prevent NOTICE errors
+
 # Build 202141220842
 
 - get it up and going on latest php and mysql (community)  PHP Version 7.4.10 / Server version: 10.4.14-MariaDB - mariadb.org binary distribution(mysql compatible)  (from xampp on windows 10)
