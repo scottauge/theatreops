@@ -3,3 +3,4 @@
 /dojox/**/*
 /dijit/**/*
 /dijit/.gitattributes
+/**/*.bak
