@@ -1,0 +1,5 @@
+#Ignore dojo - seperate package
+/dojo/**/*
+/dojox/**/*
+/dijit/**/*
+/dijit/.gitattributes
