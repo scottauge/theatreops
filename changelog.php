@@ -30,7 +30,8 @@ svn propset svn:keywords "Id Header" file.txt
 	<p>- Added dojo package to .gitignore.  Use the zips included or from the site.
 	<br>- Move to new development computer!
 	<br>- Added turning off warning errors on searchactivity.php, index.php 
-	<br> - Removed warning notices with nonotice.php</p>
+	<br>- Removed warning notices with nonotice.php
+	<br>- Added note to footer.php to add or remove information to the screen</p>
 	
     <p><b><strong>Build </strong>202141220842</b></p>
     <p><strong>- </strong>get it up and going on latest php and mysql

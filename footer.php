@@ -9,7 +9,8 @@
         <td width="33%" align="center" valign="top"><p><strong>Support</strong><!-- <br />
           <!-- <a href="mailto:sauge@amduus.com">Email</a> --><a href="changelog.php"><br />
               Build Information</a><br />
-              <a href="http://www.amduus.com/cms/?q=node/144" target="_new">About Theatre Management </a></p>
+              <a href="http://www.amduus.com/cms/?q=node/144" target="_new">About Theatre Management </a><br>
+			  Change footer.php to remove this!</p>
           <p>&nbsp;</p></td>
         <td width="33%" align="center" valign="top"><p><strong>Amduus</strong><br />
           <a href="http://www.amduus.com/cms/?q=node/43" target="_new">About </a></p>
