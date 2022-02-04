@@ -8,6 +8,8 @@ include_once "clsParameter.php";
 include_once "clsDB.php";
 include_once "clsActivity.php";
 
+// turn off warning errors
+error_reporting(~E_WARNING);
 
 $DB = new clsDB();
 $Parameter = new clsParameter($DB);
