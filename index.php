@@ -69,6 +69,10 @@ $Id: index.php 30 2019-08-09 02:56:34Z scottauge $
 
 
 <body>
+<?php
+// turn off warning errors
+error_reporting(~E_WARNING);
+?>
 <?php include_once "incAppTitle.php" ?>
 <center>
 <p><?php HelpLink("index") ?></p>
