@@ -1,0 +1,2 @@
+202148194209.sql includes new tables for inventory.
+amduusco_demotheater.sql includes all the old tables for the rest of the code.
